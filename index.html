@@ -1,123 +1,154 @@
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sanjay - Personal Website</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanjay - Personal Website</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
 
-<style>
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: 'Segoe UI', sans-serif;
-    }
+        body {
+            background: linear-gradient(to right, #e0f2fe, #f8fafc);
+            color: #333;
+            text-align: center;
+        }
 
-    body {
-        background: linear-gradient(to right, #e0f2fe, #f8fafc);
-        color: #333;
-        text-align: center;
-    }
+        header {
+            background: #0f172a;
+            color: white;
+            padding: 30px;
+        }
 
-    header {
-        background: #0f172a;
-        color: white;
-        padding: 30px;
-    }
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #fbbf24;
+            box-shadow: 0 8px 20px rgba(251, 191, 36, 0.4);
+            margin-bottom: 15px;
+            background: #1e293b;
+        }
 
-    header h1 {
-        font-size: 40px;
-    }
+        header h1 {
+            font-size: 40px;
+        }
 
-    header p {
-        font-size: 18px;
-        margin-top: 10px;
-    }
+        header p {
+            font-size: 18px;
+            margin-top: 10px;
+        }
 
-    section {
-        padding: 40px 20px;
-    }
+        section {
+            padding: 40px 20px;
+        }
 
-    .card {
-        background: white;
-        margin: 20px auto;
-        max-width: 750px;
-        padding: 25px;
-        border-radius: 15px;
-        box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-        transition: 0.3s;
-    }
+        .card {
+            background: white;
+            margin: 20px auto;
+            max-width: 750px;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            transition: 0.3s;
+        }
 
-    .card:hover {
-        transform: scale(1.03);
-    }
+        .card:hover {
+            transform: scale(1.03);
+        }
 
-    h2 {
-        color: #0f172a;
-        margin-bottom: 15px;
-    }
+        h2 {
+            color: #0f172a;
+            margin-bottom: 15px;
+        }
 
-    ul {
-        list-style: none;
-    }
+        ul {
+            list-style: none;
+        }
 
-    ul li {
-        font-size: 18px;
-        padding: 8px;
-    }
+        ul li {
+            font-size: 18px;
+            padding: 8px;
+            transition: 0.2s;
+        }
 
-    footer {
-        background: #0f172a;
-        color: white;
-        padding: 20px;
-        margin-top: 30px;
-    }
-</style>
+        ul li:hover {
+            color: #e67e22;
+            transform: translateX(5px);
+        }
 
+        .achievement-badge {
+            background: #fbbf24;
+            color: #0f172a;
+            padding: 3px 12px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 14px;
+            margin-left: 8px;
+        }
+
+        .hobby-highlight {
+            background: #fef3c7;
+            padding: 15px;
+            border-radius: 10px;
+            border-left: 4px solid #f59e0b;
+            margin-top: 10px;
+        }
+
+        footer {
+            background: #0f172a;
+            color: white;
+            padding: 20px;
+            margin-top: 30px;
+        }
+    </style>
 </head>
 
 <body>
 
 <header>
+    <!-- Sanjay's PNG image from root folder -->
+    <img src="sanjay.png" alt="Sanjay" class="profile-img" onerror="this.style.display='none'; this.insertAdjacentHTML('afterend', '<div style=\'font-size:60px; margin-bottom:15px;\'>🧑‍🔧</div>');">
     <h1>Sanjay</h1>
     <p>8th Class Student | SR, Khammam, Telangana</p>
 </header>
 
 <section>
-
     <div class="card">
-        <h2>About Me</h2>
+        <h2>🙋 About Me</h2>
         <p>
-            Hello! My name is Sanjay. I am studying 8th class in SR, Khammam, Telangana. 
-            I enjoy playing sports and helping people in my village.
+            Hello! My name is <strong>Sanjay</strong>. I am studying <strong>8th class</strong> in SR, Khammam, Telangana. 
+            I enjoy playing sports and helping people in my village with small repairs.
         </p>
     </div>
 
     <div class="card">
-        <h2>My Favorite Sports</h2>
+        <h2>🏆 My Favorite Sports</h2>
         <ul>
             <li>🏏 Cricket</li>
             <li>🏃 Kho Kho</li>
-            <li>🏐 Volleyball - 1st Prize Winner</li>
+            <li>🏐 Volleyball <span class="achievement-badge">⭐ 1st Prize Winner</span></li>
         </ul>
     </div>
 
     <div class="card">
-        <h2>My Hobbies</h2>
-        <p>
-            I like repairing appliances and solving many small issues faced by villagers. 
-            I enjoy helping people and fixing things in my free time.
-        </p>
+        <h2>🔧 My Hobbies</h2>
+        <div class="hobby-highlight">
+            <p>
+                I like <strong>repairing appliances</strong> and solving many small issues faced by our villagers. 
+                I enjoy helping people and fixing things in my free time. It makes me happy to be useful to my community!
+            </p>
+        </div>
     </div>
-
 </section>
 
 <footer>
-    <p>© 2026 Sanjay | Personal Website</p>
+    <p>© 2026 Sanjay | Personal Website | SR, Khammam, Telangana</p>
 </footer>
 
 </body>
